@@ -1,4 +1,8 @@
 @import "./theme";
+// Globals
+@import "./common";
+@import "./typography";
 
 
+// Component
 @import "../components/dashboardLayout/dashboardLayout";
