@@ -1,0 +1,50 @@
+.header{
+    padding: 24px 16px;
+    display: flex;
+    justify-content: space-between;
+    .heading{
+        margin: 0px;
+    }
+    .action-container{
+        display: flex;
+        align-items: center;
+        .action-icon{
+            margin-left: 16px;
+            height: 24px;
+            width: 24px;
+            cursor: pointer;
+        }
+    }
+    .profile-container{
+        display: flex;
+        align-items: center;
+        img{
+            margin-left: 16px;
+        }
+    }
+    // .input-component{
+    //     border: none;
+    // }
+    .hover-action{
+        
+        border: none;
+        input{
+            transition: 0.3s all ease-in-out;
+            visibility: hidden;
+            width: 0px;
+        }
+        &:focus-within{
+            input{
+                visibility: visible;
+                width: 200px;
+            }
+        }
+        &:hover{
+            border: 1px solid $hr_gray1;
+            input{
+                visibility: visible;
+                width: 200px;
+            }
+        }
+    }
+}

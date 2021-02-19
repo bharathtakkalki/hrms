@@ -1,0 +1,15 @@
+@import "./theme";
+// Globals
+@import "./common";
+@import "./typography";
+
+
+@import "../components/dashboardLayout/dashboardLayout";
+
+// Component
+@import "../components/header/header";
+@import "../components/input/input";
+@import "../components/avatar/avatar";
+
+//Screens
+@import "../screen/home/home";

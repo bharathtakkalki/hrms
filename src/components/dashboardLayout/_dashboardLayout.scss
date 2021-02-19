@@ -1,0 +1,53 @@
+.dashboard-layout{
+    display: flex;
+    height: 98vh;
+    max-height: 98vh;
+    padding: 12px;
+    background: $hr_background;
+    .side-nav-bar{
+        flex-basis: 20%;
+        max-width: 250px;
+        min-width: 200px;
+        background: $hr_background;
+
+    }
+    .main-container{
+        flex-basis: 100%;
+        background:$hr_white;
+        border-radius: 25px;
+    }
+    .logo-container{
+        text-align: center;
+        color:$hr_accent;
+    }
+    .nav-container{
+        padding-top: 16px;
+        padding-left:16px ;
+        a{
+            text-decoration: none;
+        }
+        .nav-item{
+            display: flex;
+            align-items: center;
+            color: $hr_white;
+            padding: 8px;
+            margin-top: 32px;
+            cursor: pointer;
+            transition: 0.2s all ease-in-out;
+            .item-name{
+                margin-left: 16px;
+                font-weight: 800;
+                cursor: pointer;
+            }
+            &:hover{
+                color: transparentize($color: $hr_accent, $amount: 0.6);
+                border-right: 4px solid transparentize($color: $hr_accent, $amount: 0.6);
+            }
+            &.selected{
+                color: $hr_accent;
+                border-right: 4px solid $hr_accent;
+            }
+        }
+    }
+
+}
