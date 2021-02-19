@@ -4,5 +4,12 @@
 @import "./typography";
 
 
-// Component
 @import "../components/dashboardLayout/dashboardLayout";
+
+// Component
+@import "../components/header/header";
+@import "../components/input/input";
+@import "../components/avatar/avatar";
+
+//Screens
+@import "../screen/home/home";

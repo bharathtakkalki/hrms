@@ -1,7 +1,7 @@
 .dashboard-layout{
     display: flex;
-    height: 100vh;
-    // max-height: 98vh;
+    height: 98vh;
+    max-height: 98vh;
     padding: 12px;
     background: $hr_background;
     .side-nav-bar{
@@ -12,7 +12,7 @@
 
     }
     .main-container{
-        flex-basis: 80%;
+        flex-basis: 100%;
         background:$hr_white;
         border-radius: 25px;
     }
