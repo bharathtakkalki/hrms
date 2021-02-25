@@ -1,7 +1,8 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Header from '../../components/header/Header'
+import authenticate from '../../hoc/authentication'
 
-export default function Home() {
+function Home(props) {
     return (
         <div className="home">
             <Header pageHeader="Dashboard"/>
@@ -10,3 +11,4 @@ export default function Home() {
     )
 }
 
+export default authenticate(Home)
