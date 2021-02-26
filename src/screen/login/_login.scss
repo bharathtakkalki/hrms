@@ -3,11 +3,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: login-animation 0.3s ease-in-out;
     .form-container{
         width:30%;
         border: 1px solid $hr_gray4;
         border-radius: 24px;
         height: 40%;
+        // animation: form-container-animation 1s ease-in-out;
     }
     .header-band{
         background: $hr_gray5;
@@ -29,9 +31,42 @@
     }
     .login-input{
         margin-top: 16px;
+        // opacity: 0;
+        // animation: input-field 1s ease-in-out;
+        // animation-delay: 2s;
+        // animation-fill-mode: forwards;
     }
     .login-button{
         width:100%;
         margin-top:16px;
+    }
+}
+
+@keyframes login-animation{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes form-container-animation{
+    from{
+        position: absolute;
+        left: 0px;
+    }
+    to{
+      position: absolute;
+      left: 50%;
+    }
+}
+@keyframes input-field{
+    from{
+        width: 0%;
+        opacity: 0;
+    }
+    to{
+        width: 90%;
+        opacity: 1;
     }
 }

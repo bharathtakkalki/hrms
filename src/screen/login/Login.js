@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Button from "../../components/button/Button";
+// import Button from "../../components/button/Button";
 import Input from "../../components/input/Input";
+import Button from '@material-ui/core/Button';
 import { useFormik } from "formik";
 import * as yup from "yup";
+import { TextField } from "@material-ui/core";
 
 const Login = (props) => {
   const formik = useFormik({
@@ -67,7 +69,7 @@ const Login = (props) => {
               onFocus={() => console.log("On Focus")}
               errors={formik.errors.email}
             />
-            <Input
+            {/* <Input
               name="password"
               classes={{
                 inputComponentClass: "login-input",
@@ -78,11 +80,16 @@ const Login = (props) => {
               placeholder="Enter password"
               onBlur={(event) => onBlur(event.target.name)}
               errors={formik.errors.password}
-            />
+            /> */}
+            <TextField type="password" placeholder="Enter password" onBlur={(event) => onBlur(event.target.name)} id="outlined-basic" name="password" value={formik.values.password} label="password" variant="outlined" onChange={(event) => onChangeHandler(event.target.name,event.target.value) } />
           </div>
+          {/* Custom Button 
             <Button type="submit" classname="login-button">
             Login
           </Button>
+          */}
+          <Button type="submit" variant="contained" color="primary">Sign In</Button>
+          <Button variant="outlined" color="secondary">Sign up</Button>
         </form>
       </div>
     </div>
