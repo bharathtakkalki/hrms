@@ -6,7 +6,7 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 import Avatar from "../avatar/Avatar";
 
 
-const Header = ({ pageHeader }) => {
+const Header = ({ pageHeader,userName }) => {
     return (
 
         <header className="header">
@@ -20,7 +20,7 @@ const Header = ({ pageHeader }) => {
                 <IoIosNotificationsOutline  className="action-icon"/>
             </div>
             <div className="profile-container">
-                <label>Rabindra Kumar</label>
+                <label>{userName}</label>
                 <Avatar/>
             </div>
             </div>

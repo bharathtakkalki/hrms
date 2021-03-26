@@ -4,7 +4,9 @@ import { BsPeople } from 'react-icons/bs';
 import { CgFileDocument } from 'react-icons/cg';
 import {VscGraph} from 'react-icons/vsc';
 import { FiCalendar,FiSettings} from 'react-icons/fi';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation,useHistory } from 'react-router-dom';
+import Button from '../button/Button';
+import axios from '../../utils/axios';
 const navItems = [
     {
         name: "Dashboard",
@@ -45,7 +47,18 @@ const navItems = [
 
 
 const DashboardLayout = ({children}) =>{
+    const history = useHistory()
     const location = useLocation()
+    const logoutHanlder = () =>{
+        axios.get('/auth/logout')
+        .then(response =>{
+            localStorage.removeItem('access-token')
+            history.push('/login')
+        })
+        .catch(error => {
+            console.log(error)
+        })
+    }
     return(
         <div className="dashboard-layout">
                 <nav className="side-nav-bar">
@@ -64,6 +77,9 @@ const DashboardLayout = ({children}) =>{
                     </div>
                     <div className="image-container-small">
                         Add vector of your choice
+                    </div>
+                    <div style={{position:"absolute",bottom:8}}>
+                        <Button onClick={logoutHanlder}>Logout</Button>
                     </div>
                 </nav>
                 <div className="main-container">
