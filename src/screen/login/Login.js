@@ -62,7 +62,7 @@ const Login = (props) => {
     <div className="login">
       <div className="form-container">
         <div className="header-band">
-          <h3> HRMS </h3>
+          <h3>New HRMS </h3>
         </div>
         <form className="form" onSubmit={formik.handleSubmit}>
           <div>
